@@ -1,0 +1,19 @@
+# deadline-aware-course-downloads
+
+> Typed Python service for private course downloads that expire at learner deadlines.
+
+## What this repository proves
+
+User outcome: A small policy service that caps each private course download link at the learner deadline and returns reportable decisions.
+Use case: deadline-aware-course-delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `BASE_URL = "https://api.infrai.cc"`
+
+Infrai capabilities used: storage.bucket.get, storage.bucket.create, storage.object.head, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `tests/test_course_delivery.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

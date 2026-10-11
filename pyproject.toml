@@ -1,0 +1,19 @@
+[project]
+name = "deadline-aware-course-downloads"
+version = "0.1.0"
+description = "A typed Python service that issues expiring course download links before learner deadlines."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "pydantic>=2.8,<3",
+  "uvicorn>=0.30,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
